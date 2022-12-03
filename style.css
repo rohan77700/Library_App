@@ -1,0 +1,266 @@
+:root {
+    --primary-black: #000;
+    --primary-white: #fff;
+    --primary-red: #ff6464;
+    --primary-green: #32aa32;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+
+/* header */
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .logo {
+    width: 250px;
+}
+
+.add-btn {
+    min-width: 50px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.add-btn-svg {
+    width: 100%;    
+}
+
+.add-btn-svg:hover {
+    transform: scale(1.5);
+}
+
+
+/* main */
+
+.main {
+    position: absolute;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    grid-auto-rows: minmax(300px, auto);
+    gap: 100px;
+    padding: 50px 100px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 550px; 
+    padding: 0 0 5rem;  
+    border-radius: 0 1rem 1rem 0;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-image {
+    background-image: url("https://media.istockphoto.com/id/1136635341/photo/old-book-open-to-chapter-i.jpg?s=612x612&w=0&k=20&c=u6a9a5oY-94hV_lhqP_N-yxc0sWK0NEf-ZKl8f9Za00=");
+    background-size: cover;
+    flex: 1;
+}
+
+.card-title {
+    padding: 0.5rem 1rem;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card-author {
+    padding: 0 1rem;
+    font-size: 18px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.card-pages {
+    position: absolute;
+    padding: 7px;
+    left: 34px;
+    bottom: 0;
+    border-radius: 0 10px 0 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.card-pages-svg {
+    position: absolute;
+    min-width: 34px;
+    padding: 5px;
+    left: -34px;
+    bottom: 0px;
+    background-color: var(--primary-white);
+    filter: opacity(0.7);
+}
+
+.card-checkbox {
+    display: none;
+}
+
+.card-checkbox-label {
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 10px 0;
+    cursor: pointer;
+    background: var(--primary-red);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.card-checkbox-label-svg {
+    height: 20px;
+    filter: opacity(0.7);
+}
+
+.card-checkbox:checked + .card-checkbox-label {
+    background: var(--primary-green);
+}
+
+.card-checkbox-label:hover .card-checkbox-label-svg {
+    filter: invert(1);
+}
+
+.card-btn {
+    position: absolute;
+    padding: 7px;
+    right: 0;
+    bottom: 0;
+    border: none;
+    border-radius: 10px 0 0 0;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card-btn:hover {
+    background-color: var(--primary-red);
+}
+
+.card-btn-svg {
+    height: 20px;
+    filter: opacity(0.7);
+}
+
+.card-btn:hover .card-btn-svg {
+    filter: invert(1);
+}
+
+
+/* modal */
+
+.form-modal {
+    position: relative;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.form-modal.active {
+    display: flex;
+}
+
+.book-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 60%;
+    padding: 30px;
+    z-index: 2;
+    border-radius: 1rem;
+    background-color: var(--primary-white);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 10);
+}
+
+.book-form-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.book-form-close:hover {
+    filter: invert(0.7);
+}
+
+.book-form-fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 30px 30px;
+    border: none;
+}
+
+.new-book {
+    text-align: center;
+    font-family: Impact, 'Arial', sans-serif;
+}
+
+.book-form-btn {
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.book-form-btn:hover {
+    filter: opacity(0.7);
+}
+
+.book-form-btn:active {
+    color: var(--primary-white);
+    background-color: var(--primary-black);
+}
+
+.book-form-fieldset input {
+    width: 100%;
+    margin: 15px;
+    padding: 7px;
+    border-radius: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.book-form-fieldset input:hover {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.book-form-checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 40px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#book-form-read {
+    margin: 0;
+    width: 24px;
+    height: 24px;
+    accent-color: var(--primary-black);
+}
