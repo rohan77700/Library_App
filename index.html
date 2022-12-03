@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/favicon.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <img class="logo" src="assets/lib_logo.png" alt="">
+            <button class="add-btn"><img class="add-btn-svg" src="assets/file-earmark-plus.svg" alt="" /></button>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Book -->
+    </main>
+    
+    <section class="form-modal">
+        <form class="book-form" id="book-form" autocomplete="off">
+            <a href="/" class="book-form-close">
+                <img class="book-form-close-svg" src="assets/x-lg.svg" alt=""/>
+            </a>
+            <fieldset class="book-form-fieldset">
+                <h2 class="new-book">📚 Add a new Book 📚</h2>
+
+                <input type="text" id="book-form-name" name="book-form-name" placeholder="Book Title" required />
+
+                <input type="text" id="book-form-author" name="book-form-author" placeholder="Book Author" required />
+
+                <input type="number" id="book-form-pages" name="book-form-pages" placeholder="Book Page" required />
+
+                <div class="book-form-checkbox-container">
+                    <label for="book-form-read">Have you read the book?</label>
+                    <input type="checkbox" id="book-form-read" name="book-form-read" />
+                </div>
+            </fieldset>
+            <button class="book-form-btn" type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
