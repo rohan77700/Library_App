@@ -1,7 +1,7 @@
 # Library App
 This project is a small Library app, created with HTML, CSS and JavaScript. The data is stored in localStorage.
 
-<a href="https://rohan77700.github.io/Library_App/">🔗 Live Demo </a>
+<a href="https://rohan77700.github.io/Library_App/" target="_blank">🔗 Live Demo </a>
 
 <br><br><br>
 
